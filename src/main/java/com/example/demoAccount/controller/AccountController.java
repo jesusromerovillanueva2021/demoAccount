@@ -1,5 +1,7 @@
 package com.example.demoAccount.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -45,7 +47,12 @@ public class AccountController {
 	@DeleteMapping("/delete/{id}")
 	public Mono<Void> deleteAccount(@PathVariable int id){
 	    return service.deleteAccount(id); 
-}
+	}
+	
+	@GetMapping("/accountsbytcustomer/{idCustomer}")
+	public Mono<List<AccountDto>> getAccountsByCustomer(@PathVariable int idCustomer){
+		return service.getAccountsByIdCustomer(idCustomer);
+	}
 }
 
 

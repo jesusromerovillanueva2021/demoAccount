@@ -7,5 +7,5 @@ import com.example.demoAccount.entity.Account;
 
 @Repository	
 public interface AccountRepository extends ReactiveCrudRepository<Account, Integer> {
-
+	
 }

@@ -18,4 +18,5 @@ public class Account {
 	private int id;
 	private AccountType type;
 	private double amount;
+	private int idCustomer;
 }
